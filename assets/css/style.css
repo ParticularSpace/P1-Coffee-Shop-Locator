@@ -1,0 +1,12 @@
+.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
