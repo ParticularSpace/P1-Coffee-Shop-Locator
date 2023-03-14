@@ -1,94 +1,66 @@
-/* Style for body */
 body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #D2B48C;
+    color: #3C2415;
   }
   
-  /* Style for header */
+  .cover-container {
+    max-width: 42em;
+    margin: 0 auto;
+    background-color: #F2E6D8;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+  }
+  
   header {
-    margin-bottom: 2rem;
+    background-color: #D1C3A9;
+    padding: 10px 0;
+    border-radius: 20px 20px 0 0;
   }
   
-  h3 {
-    margin-bottom: 0;
-    font-size: 2rem;
-  }
-  
-  nav {
-    font-size: 1.2rem;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 1rem;
-  }
-  
-  nav a.active {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-  
-  /* Style for main */
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  h1, h3, nav a {
+    color: #3C2415;
   }
   
   h1 {
     font-size: 4rem;
-    margin-bottom: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
   }
   
-  p.lead {
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
+  .form-control {
+    background-color: #E5D5B1;
+    color: #3C2415;
+    border-radius: 20px;
+    height: 50px;
+    padding: 0 20px;
+    border: none;
   }
   
-  /* Style for search bar */
+  .primary-btn {
+    background-color: #3C2415;
+    color: #F2E6D8;
+    border-radius: 20px;
+    border: none;
+    height: 50px;
+    width: 150px;
+    margin-left: 20px;
+  }
+  
+  .primary-btn:hover {
+    background-color: #634A34;
+  }
+  
   .container {
-    width: 100%;
-    max-width: 500px;
-  }
-  
-  .form-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  input[type="text"] {
-    flex: 1;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 0;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-  
-  button {
-    padding: 0.5rem 1.5rem;
-    font-size: 1.2rem;
-    background-color: #F5A623;
-    border: none;
-    color: #fff;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #D9841F;
+    text-align: center;
+    margin-top: 2em;
+    border: 2px solid #D1C3A9;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #F2E6D8;
   }
   
   .zip-data {
-    font-size: 1.2rem;
-    margin-top: 1rem;
+    margin-top: 1em;
   }
   
