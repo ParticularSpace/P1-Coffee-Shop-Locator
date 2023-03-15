@@ -28,10 +28,18 @@ const restaurantNear = {
 
 coffeeQuiz.on('click', function() {
     console.log(restaurantNear)
+
+    
 });
 
 zipCodeBtn.on('click', function() {
     console.log(coffeeAPI)
+
+
+
+
+
+
     var zipCode = $('#zip-code-btn').val();
     if (zipCode.length !== 5) {
         $('#zip-code-btn').val('');
