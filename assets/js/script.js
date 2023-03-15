@@ -1,3 +1,5 @@
+Document.ready(function() {
+
 zipCodeBtn = $('.primary-btn');
 zipDataDisplay = $('.zip-data');
 
@@ -8,8 +10,28 @@ zipCodeBtn.on('click', function() {
         $('#zip-code-btn').val('');
         alert('Please enter a valid zip code');
     } else {
-        zipDataDisplay.textContent = 'Loading...';
+        //Locator API
+        $.ajax({
+            url: ' ',
+            dataType: 'json',
+            success: function(data) {
+                var zipData = data;
+                zipDataDisplay.html(zipData);
+            }
+        });
+        //Ingredients API
+        $.ajax({
+            url: ' ',
+            dataType: 'json',
+            success: function(data) {
+                var zipData = data;
+                zipDataDisplay.html(zipData);
+            }
+        });
     }
 });
 
-////==== test
+
+
+
+});
