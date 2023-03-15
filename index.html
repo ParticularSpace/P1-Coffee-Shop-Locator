@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <title>Coffee Shop Locator</title>
-</head>
-<body>
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <header>
-      <div class="header-container">
-        <h3>Beans</h3>
-        <nav>
-          <a href="#" class="nav-link active">Home</a>
-          <a href="#" class="nav-link">Coffee</a>
-          <a href="#" class="nav-link">Finder</a>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <h1 class="title">Coffee Locator</h1>
-      <p class="lead">Find your ideal brew and your local shops!</p>
-      <div class="container">
-        <div class="search-container">
-          <div class="form-group">
-            <input type="text" class="form-control" id="zip-code-btn" placeholder="Enter Zip Code">
-            <button type="submit" class="btn primary-btn">Search</button>
-          </div>
-          <p class="zip-data"></p>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Coffee Shop Locator</title>
+  </head>
+  <body>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header>
+        <div class="header-container">
+          <h3>Beans</h3>
+          <nav>
+            <a href="#" class="nav-link active">Home</a>
+            <a href="#" class="nav-link">Coffee</a>
+            <a href="#" class="nav-link">Finder</a>
+          </nav>
         </div>
-      </div>
-    </main>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="assets/js/script.js"></script>
-</body>
+      </header>
+      <main>
+        <div class="container">
+          <h1 class="title">Coffee Locator</h1>
+          <p class="lead">Find your ideal brew and your local shops!</p><button type="submit" id="centerQuiz"
+            class="btn primary-btn">Take Quiz</button>
+          <button type="submit" id="centerQuiz" class="btn primary-btn">Take Quiz</button>
+        </div>
+        <div class="container">
+          <div class="search-container">
+            <div class="form-group">
+              <input type="text" class="form-control" id="zip-code-btn" placeholder="Enter Zip Code">
+              <button type="submit" class="btn primary-btn">Search</button>
+              <p class="zip-data"></p>
+            </div>
+          </div>
+      </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
