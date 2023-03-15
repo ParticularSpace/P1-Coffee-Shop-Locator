@@ -40,8 +40,10 @@ body {
     padding: 0 20px;
     border: none;
   }
+
   
   .primary-btn {
+    text-align: center;
     background-color: #3C2415;
     color: #F2E6D8;
     border-radius: 20px;
@@ -49,6 +51,19 @@ body {
     height: 50px;
     width: 150px;
     margin-left: 20px;
+    
+  }
+
+  #centerQuiz {
+    text-align: center;
+    background-color: #3C2415;
+    color: #F2E6D8;
+    border-radius: 20px;
+    border: none;
+    height: 50px;
+    width: 150px;
+    margin-left: 20px;
+    
   }
   
   .primary-btn:hover {
@@ -67,4 +82,6 @@ body {
   .zip-data {
     margin-top: 1em;
   }
+
+  
   
