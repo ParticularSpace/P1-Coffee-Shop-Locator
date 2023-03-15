@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
-zipCodeBtn = $('.primary-btn');
+zipCodeBtn = $('#zip-code-btn');
 zipDataDisplay = $('.zip-data');
+coffeeQuiz = $('#centerQuiz');
 
 const coffeeAPI = {
 	"async": true,
@@ -13,6 +14,21 @@ const coffeeAPI = {
 		"X-RapidAPI-Host": "the-coffee-api.p.rapidapi.com"
 	}
 };
+
+const restaurantNear = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/MI/city/West%20Bloomfield/0",
+	"method": "GET",
+	"headers": {
+		"X-RapidAPI-Key": "81ab8adb7dmsha1dccf88ead99f0p166e50jsn077cda1fb367",
+		"X-RapidAPI-Host": "restaurants-near-me-usa.p.rapidapi.com"
+	}
+};
+
+coffeeQuiz.on('click', function() {
+    console.log(restaurantNear)
+});
 
 zipCodeBtn.on('click', function() {
     console.log(coffeeAPI)

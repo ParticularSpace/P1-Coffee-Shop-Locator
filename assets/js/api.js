@@ -1,6 +1,6 @@
 // Coffee recipes
 
-const settings = {
+const setings = {
 	"async": true,
 	"crossDomain": true,
 	"url": "https://the-coffee-api.p.rapidapi.com/drinks",
