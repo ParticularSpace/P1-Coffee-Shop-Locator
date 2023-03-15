@@ -32,6 +32,3 @@ zipCodeBtn.on('click', function() {
 });
 
 
-
-
-});
