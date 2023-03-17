@@ -3,70 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="assets/css/quiz.css">
-
+    <title>Potter Quiz</title>
   </head>
 
   <body>
-    <h1 style="text-align: center">Potter Quiz</h1>
-    <h2 id="startTimer"></h2>
-    <button id="startQuiz" type="button" onclick="">Start Quiz</button>
+    <h1 class="title has-text-centered is-size-1">Coffee Quiz</h1>
+    <h2 id="startTimer" class="has-text-centered is-size-2"></h2>
+    <button id="startQuiz" class="button is-primary is-medium is-fullwidth">Start Quiz</button>
 
     <main id="box" class="hide">
-      <h2>Please see question and choose one of the answers below:</h2>
+      <h2 class="has-text-centered is-size-3">Please see question and choose one of the answers below:</h2>
       <div>
-        <p id="questionPromp">Start Quiz</p>
+        <p id="questionPromp" class="has-text-centered is-size-4">Start Quiz</p>
         <p id="correctAlert"></p>
       </div>
-
-      <!-- buttons have data attributes that can be targetted. -->
-      <div>
-        <p id="questionPromp">Start Quiz</p>
-        <p id="correctAlert"></p>
-      </div>
-
-      <!-- make so that each answer holds a number value, take value and turn it into a input for ingredents -->
-      <section class="answers">
-        <button id="choiceA" type="button" onclick="">Answer 1</button>
-        <button id="choiceB" type="button" onclick="">Answer 2</button>
-        <button id="choiceC" type="button" onclick="">Answer 3</button>
-        <button id="choiceD" type="button" onclick="">Answer 4</button>
-    
+      <section class="section">
+        <div class="buttons is-centered">
+          <button id="choiceA" class="button is-primary is-medium" type="button">Answer 1</button>
+          <button id="choiceB" class="button is-primary is-medium" type="button">Answer 2</button>
+          <button id="choiceC" class="button is-primary is-medium" type="button">Answer 3</button>
+          <button id="choiceD" class="button is-primary is-medium" type="button">Answer 4</button>
+          <button id="choiceE" class="button is-primary is-medium" type="button">Answer 5</button>
+        </div>
       </section>
     </main>
-    <section id="initials" class="hide">
-      <ul>
-        <li>
-          <h2>Congrats on finishing the Potter Quiz!
-          </h2>
-          <h3>Enter you initials below to save your score :)</h3>
-          <label for="msg">Initials</label>
-          <textarea id="msg" name="comments"></textarea>
-        </li>
-        <button id="save">Save Data</button>
-      </ul>
-    </section>
-
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
     <script src="assets/js/quiz.js"></script>
-
   </body>
-
-
-
-      <!-- html for quiz section -->
-      <!-- <div class= "container">
-        <p id="questionPromp"></p>
-        <p id="correctAlert"></p>
-      </div>
-
-      <section class="container">
-        <button id="choiceA" type="button" onclick="">Answer 1</button>
-        <button id="choiceB" type="button" onclick="">Answer 2</button>
-        <button id="choiceC" type="button" onclick="">Answer 3</button>
-        <button id="choiceD" type="button" onclick="">Answer 4</button>
-      </section> -->
 </html>

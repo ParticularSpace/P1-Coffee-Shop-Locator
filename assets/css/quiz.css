@@ -1,53 +1,59 @@
+/* Set background color to coffee brown */
+body {
+  background-color: #6f4e37;
+}
+
+/* Style the title */
+.title {
+  color: #f5d5cb;
+  margin-top: 5%;
+}
+
+/* Style the "Start Quiz" button */
+#startQuiz {
+  background-color: #a67c4a;
+  color: #f5d5cb;
+  margin-top: 5%;
+  border-radius: 20px;
+  height: 40px;
+  width: 120px;
+  font-size: 18px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Style the main box */
 #box {
-    border-style: solid;
-    text-align: center;
-    background-color: rgb(255, 186, 161);
-    border-width: 5px;
-    padding: 30px;
-    flex: 0 0 300px;
-    margin: 50px;
-    /* display: none; */
-  }
+  background-color: #f5d5cb;
+  color: #6f4e37;
+  margin-top: 5%;
+  padding: 2%;
+  border-radius: 10px;
+}
 
-  #initials {
-    /* display: block; */
-    /* color: brown; */
-    border-style: solid;
-    text-align: center;
-    background-color: rgb(255, 186, 161);
-    border-width: 5px;
-    padding: 30px;
-    flex: 0 0 300px;
-    margin: 50px;
-  }
+/* Style the question prompt */
+#questionPromp {
+  margin-top: 10%;
+}
 
-  #correctAlert {
-    color: rgb(141, 154, 255);
-  }
-  
-  #startTimer {
-    display: block;
-    color: black;
-    flex: content;
-    
-  }
-  
+/* Style the answer buttons */
+.buttons {
+  margin-top: 5%;
+}
 
-  .hide {
-    display: none;
-  }
+/* Style the initials section */
+#initials {
+  background-color: #f5d5cb;
+  color: #6f4e37;
+  margin-top: 5%;
+  padding: 2%;
+  border-radius: 10px;
+}
 
-  /* .show {
-    display: none;
-  } */
-
-  /* #questionPromp {
-    text-align: center;
-  } */
-
-  .answer {
-    text-align: center;
-  }
-
-
-  /* need to create small sections  */
+/* Style the textarea */
+textarea {
+  background-color: #f5e2d0;
+  border: none;
+  border-radius: 5px;
+  color: #6f4e37;
+}

@@ -13,6 +13,7 @@ var startTime = 500;
 
 startQuiz.addEventListener("click", function () {
   mainBox.classList.remove("hide");
+
   renderQuestion();
 });
 
