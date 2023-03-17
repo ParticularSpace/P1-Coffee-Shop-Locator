@@ -13,15 +13,7 @@ var startTime = 500;
 
 startQuiz.addEventListener("click", function () {
   mainBox.classList.remove("hide");
-  setInterval(function () {
-    startTime--;
-    if (startTime <= 0) {
-      startTime = 0;
-      quizEnd();
-    }
-      // quizEnd();
-     // attempts to make it stop at zero and clear the mainbox upon hitting zero
-  }, 1000);
+
   renderQuestion();
 });
 
@@ -30,48 +22,48 @@ startQuiz.addEventListener("click", function () {
 
 var questionPromp = [
   {
-    question: "What was professor snapes first name?",
-    choiceA: "Severus",
-    choiceB: "Black",
-    choiceC: "Sirus",
-    choiceD: "James",
+    question: "How many scoops of sugar do you prefer?",
+    choiceA: "One",
+    choiceB: "Two",
+    choiceC: "Three",
+    choiceD: "Four",
     correct: "choiceA",
   },
   {
-    question: "What kind of pet did Ron have?",
-    choiceA: "Duck",
-    choiceB: "Rat",
-    choiceC: "Mouse",
-    choiceD: "Owl",
+    question: "Would you like room for cream?",
+    choiceA: "Ehhh",
+    choiceB: "None for me",
+    choiceC: "Some",
+    choiceD: "Lots",
     correct: "choiceB",
   },
   {
-    question: "Who was the most powerfull wizard?",
-    choiceA: "Harry",
-    choiceB: "Tom",
-    choiceC: "Albus",
-    choiceD: "Grinderwald",
+    question: "Favorite coffee shop from below?",
+    choiceA: "Starbucks",
+    choiceB: "Philz",
+    choiceC: "The Old Independent",
+    choiceD: "Dutch Bros",
     correct: "choiceC",
   },
   {
-    question: "What kind of house did the Weasleys live in?",
-    choiceA: "Apartment",
-    choiceB: "Duplex",
-    choiceC: "Mansion",
-    choiceD: "Burrow",
+    question: "Choose a mix from below",
+    choiceA: "Americano",
+    choiceB: "Latte",
+    choiceC: "Cappuchino",
+    choiceD: "Macchiato",
     correct: "choiceD",
   },
   {
-    question: "What were Hermionies parents occupation?",
-    choiceA: "Pyschologists",
-    choiceB: "Dentists",
-    choiceC: "Mailworkers",
-    choiceD: "Engineers",
+    question: "How you like you coffee",
+    choiceA: "Hot",
+    choiceB: "Iced",
+    choiceC: "In a hurry!",
+    choiceD: "Just a little bit",
     correct: "choiceB",
   },
 
   {
-    question: "Which is not a deathly hollow?",
+    question: "",
     choiceA: "Elder Wand",
     choiceB: "Cloak of Invisibility",
     choiceC: "Resurection Stone",
@@ -105,12 +97,9 @@ answersClick.addEventListener("click", function (event) {
 
 function checkAnswer(buttonClickID) {
   if (questionPromp[questionIndex].correct === buttonClickID) {
-    correctAlert.textContent = "Correct!";
+    correctAlert.textContent = "Nice!";
   } else {
-    // startTime -= 5;
-    startTime = startTime - 5;
-    // questionPromp[questionIndex];
-    correctAlert.textContent = "Nope!";
+    correctAlert.textContent = "Yum!";
   }
 
   
