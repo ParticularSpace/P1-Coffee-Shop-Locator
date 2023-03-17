@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="assets/css/quiz.css">
-    <title>Potter Quiz</title>
+    <title>Coffee Quiz</title>
   </head>
 
   <body>
     <h1 class="title has-text-centered is-size-1">Coffee Quiz</h1>
     <h2 id="startTimer" class="has-text-centered is-size-2"></h2>
-    <button id="startQuiz" class="button is-primary is-medium is-fullwidth">Start Quiz</button>
-
     <main id="box" class="hide">
       <h2 class="has-text-centered is-size-3">Please see question and choose one of the answers below:</h2>
       <div>
-        <p id="questionPromp" class="has-text-centered is-size-4">Start Quiz</p>
+        <button id="startQuiz" class="button is-primary is-medium is-fullwidth">Start Quiz</button>
+        <p id="questionPromp" class="has-text-centered is-size-4"></p>
         <p id="correctAlert"></p>
       </div>
       <section class="section">

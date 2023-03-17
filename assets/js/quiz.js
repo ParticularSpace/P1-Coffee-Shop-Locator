@@ -61,15 +61,6 @@ var questionPromp = [
     choiceD: "Just a little bit",
     correct: "choiceB",
   },
-
-  {
-    question: "",
-    choiceA: "Elder Wand",
-    choiceB: "Cloak of Invisibility",
-    choiceC: "Resurection Stone",
-    choiceD: "The Room of Requirement",
-    correct: "choiceD",
-  },
 ];
 
 const lastQuestion = questionPromp.length - 1;
