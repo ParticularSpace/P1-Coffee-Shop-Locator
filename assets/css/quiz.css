@@ -1,0 +1,53 @@
+#box {
+    border-style: solid;
+    text-align: center;
+    background-color: rgb(255, 186, 161);
+    border-width: 5px;
+    padding: 30px;
+    flex: 0 0 300px;
+    margin: 50px;
+    /* display: none; */
+  }
+
+  #initials {
+    /* display: block; */
+    /* color: brown; */
+    border-style: solid;
+    text-align: center;
+    background-color: rgb(255, 186, 161);
+    border-width: 5px;
+    padding: 30px;
+    flex: 0 0 300px;
+    margin: 50px;
+  }
+
+  #correctAlert {
+    color: rgb(141, 154, 255);
+  }
+  
+  #startTimer {
+    display: block;
+    color: black;
+    flex: content;
+    
+  }
+  
+
+  .hide {
+    display: none;
+  }
+
+  /* .show {
+    display: none;
+  } */
+
+  /* #questionPromp {
+    text-align: center;
+  } */
+
+  .answer {
+    text-align: center;
+  }
+
+
+  /* need to create small sections  */
