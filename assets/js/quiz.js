@@ -9,13 +9,12 @@ var startQuiz = document.getElementById("startQuiz");
 var startTimer = document.getElementById("startTimer");
 var correctAlert = document.getElementById("correctAlert");
 var initials = document.getElementById("initials");
-var startTime = 60;
+var startTime = 500;
 
 startQuiz.addEventListener("click", function () {
   mainBox.classList.remove("hide");
   setInterval(function () {
     startTime--;
-    startTimer.textContent = "Timer:" + startTime;
     if (startTime <= 0) {
       startTime = 0;
       quizEnd();
