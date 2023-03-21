@@ -9,6 +9,7 @@ var startQuiz = document.getElementById("startQuiz");
 var startTimer = document.getElementById("startTimer");
 var correctAlert = document.getElementById("correctAlert");
 var initials = document.getElementById("initials");
+var section = document.getElementById("section");
 var startTime = 500;
 
 startQuiz.addEventListener("click", function () {
@@ -102,16 +103,6 @@ function checkAnswer(buttonClickID) {
     correctAlert.textContent = "Yum!";
   }
 
-  
-
-  // add a condition that gives a correct answer a point.
-  // var finalScore = localStorage.getItem("points");
-
-  // function correctScore(buttonClickID) {
-  //     if (questionPromp[questionIndex].correct === buttonClickID) {
-
-  //     } else {;
-  //     }
 
   questionIndex++;
   if (startTime === 0 || questionIndex === questionPromp.length) {
@@ -125,31 +116,11 @@ function checkAnswer(buttonClickID) {
   };
  
 };
-// var nameBox = document.getElementById("answers");
-// function inputBox () {
-//   document.createElement("INPUT");
-// nameBox.setAttribute("type", "text");
-// };
+
 
 function quizEnd() {
-  startTime++;
-  initials.textContent = "Final Score:" + startTime;
-  initials.classList.remove("hide");
+  section.classList.add("hide");
   
-
-  // initials.classList.remove ("hide");
-  // mainBox.classList.add("hide");
-  // clearInterval(startQuiz);
-  // initials.classList.remove("initials");
-
-
-// startQuiz = $('#startQuiz');
-// questionPromp = $('#questionPromp');
-// answers = $('.answers')
-
-//   startQuiz.on("click", function () {
-//     console.log("container");
-// });
  
 }
 
