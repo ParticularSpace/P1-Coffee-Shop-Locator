@@ -5,7 +5,7 @@ let rec; // recipes
 let loc; // location
 
 // external variable: let x = value of quiz score.
-let $x = 'breve'; // = quiz score;
+let $x = 'flat_white'; // = quiz score;
 // Coffee recipes
 
 const coffeeRecipes = {
