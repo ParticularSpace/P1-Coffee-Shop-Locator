@@ -1,4 +1,4 @@
-Document.ready(function() {
+/*Document.ready(function() {
 
 zipCodeBtn = $('.primary-btn');
 zipDataDisplay = $('.zip-data');
@@ -30,5 +30,5 @@ zipCodeBtn.on('click', function() {
         });
     }
 });
-
+*/
 
