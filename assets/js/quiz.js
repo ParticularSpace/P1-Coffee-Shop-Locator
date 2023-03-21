@@ -22,43 +22,51 @@ startQuiz.addEventListener("click", function () {
 
 var questionPromp = [
   {
-    question: "How many scoops of sugar do you prefer?",
-    choiceA: "One",
-    choiceB: "Two",
-    choiceC: "Three",
-    choiceD: "Four",
+    question: "Would you like milk or Half-and-half?",
+    choiceA: "Yes",
+    choiceB: "No",
+    choiceC: "",
+    choiceD: "",
     correct: "choiceA",
   },
   {
-    question: "Would you like room for cream?",
-    choiceA: "Ehhh",
+    question: "Which one do you prefer?",
+    choiceA: "Milk",
+    choiceB: "Half-and-half",
+    choiceC: "",
+    choiceD: "",
+    correct: "choiceA",
+  },
+  {
+    question: "Would you like milk foam?",
+    choiceA: "Yes",
     choiceB: "None for me",
     choiceC: "Some",
     choiceD: "Lots",
     correct: "choiceB",
   },
   {
-    question: "Favorite coffee shop from below?",
-    choiceA: "Starbucks",
-    choiceB: "Philz",
-    choiceC: "The Old Independent",
-    choiceD: "Dutch Bros",
+    question: "Would you like to add chocolate syrup to your drink?",
+    choiceA: "Yes",
+    choiceB: "No",
+    choiceC: "",
+    choiceD: "",
     correct: "choiceC",
   },
   {
-    question: "Choose a mix from below",
-    choiceA: "Americano",
-    choiceB: "Latte",
-    choiceC: "Cappuchino",
-    choiceD: "Macchiato",
+    question: "How do you like your coffee",
+    choiceA: "Iced",
+    choiceB: "Hot",
+    choiceC: "",
+    choiceD: "",
     correct: "choiceD",
   },
   {
-    question: "How you like you coffee",
-    choiceA: "Hot",
-    choiceB: "Iced",
-    choiceC: "In a hurry!",
-    choiceD: "Just a little bit",
+    question: "Would you like to add a shot of alcohol?",
+    choiceA: "Please",
+    choiceB: "Uh, no thanks",
+    choiceC: "",
+    choiceD: "",
     correct: "choiceB",
   },
 ];
@@ -74,8 +82,8 @@ function renderQuestion() {
   question.textContent = q.question;
   choiceA.innerHTML = q.choiceA;
   choiceB.innerHTML = q.choiceB;
-  choiceC.innerHTML = q.choiceC;
-  choiceD.innerHTML = q.choiceD;
+  // choiceC.innerHTML = q.choiceC;
+  // choiceD.innerHTML = q.choiceD;
 }
 
 var answersClick = document.querySelector("section");
