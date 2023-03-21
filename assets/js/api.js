@@ -3,6 +3,9 @@ let lati = '';
 
 let rec; // recipes
 let loc; // location
+//let loop = loc.length;
+
+let test = ['','','','','',''];
 
 // external variable: let x = value of quiz score.
 let $x = 'breve'; // = quiz score;
@@ -38,9 +41,9 @@ function displayRecipes () {
 */
 
 function displayLocations () {
-	//let loop = loc.length;
 	
-	for(let i = 0; i < loc.length; i++){
+	
+	for(let i of loc){
 	
 	let $newDiv = $("<div/>")
 		.addClass("card")
@@ -71,8 +74,8 @@ $(document).ready(function () {
 	}
 
 	// this is the search button function that will call for the cafes.
-	$(".btn1").click(function(){
-		let $zipCodeBtn = $("#zip-code-btn").val()
+	$("#zip-code-btn").click(function(){
+		let $zipCodeBtn = $(".form-control").val()
 
 		let apiKey = "4f9b9f0d81395d4880a33e43a1783f9e";
 		//console.log($zipCodeBtn);
@@ -85,7 +88,7 @@ $(document).ready(function () {
             return response.json();
         })
     	.then(function(data){
-        	console.log(data);
+        	//console.log(data);
 			//===========================
 			lati = data.city.coord.lat;
 			longi = data.city.coord.lon;
