@@ -43,12 +43,18 @@ function displayRecipes () {
 function displayLocations () {
 	
 	
-	for(let i of loc){
-	
-	let $newDiv = $("<div/>")
-		.addClass("card")
-		.html(loc[i].poi.name);
-	$("locations").append($newDiv);
+	for(let i = 0; i < loc.length; i++){
+
+		let temp1 = loc[i].poi.name;
+		let temp2 = loc[i].address.streetNumber;
+		let temp3 = loc[i].address.streetName;
+		let temp4 = loc[i].poi.phone;
+		let $newDiv = $("<li/>")
+		.addClass("cafe")
+		.attr("style","background-color: beige")
+		.html(temp1 + ", " + temp2 + " " + temp3 + ", " + temp4);
+
+	$(".locations").append($newDiv);
 
 	}
 };
@@ -69,8 +75,9 @@ $(document).ready(function () {
 			console.log(data);
 			loc = data.results;
 
-	
+			displayLocations();
 		});
+		
 	}
 
 	// this is the search button function that will call for the cafes.
@@ -99,7 +106,7 @@ $(document).ready(function () {
 			
 		});
 	
-		//displayLocations();
+		
 		
 	});
 
