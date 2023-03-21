@@ -8,7 +8,7 @@ Milk
 Milk foam (would you like milk foam?
 Chocolate Syrup (chocolate syrup in your drink?)
 Iced (Hot or iced)
-Alcohol. (would you like to add a shot of alcohol)
+Alcohol. (would you like to add a shot of alcohol).
 
 Drink list for results 
 Mocha -- if chocolate syrup
