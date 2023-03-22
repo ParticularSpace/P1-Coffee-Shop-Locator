@@ -56,8 +56,8 @@ function displayLocations () {
 		let temp3 = loc[i].address.streetName;
 		let temp4 = loc[i].poi.phone;
 		let $newDiv = $("<li/>")
-		.addClass("cafe")
-		.attr("style","background-color: beige")
+		.addClass("card")
+		.attr("style","background-color: beige; padding: 1%; border-radius: 12px; margin-top: 2%; list-style-type: none")
 		.html(temp1 + ", " + temp2 + " " + temp3 + ", " + temp4);
 
 	$(".locations").append($newDiv);
