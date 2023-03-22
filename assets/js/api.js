@@ -41,7 +41,13 @@ function displayRecipes () {
 */
 
 function displayLocations () {
-	
+
+	let $parent = $(".locations");
+
+	if($parent.children().length > 0){
+		$parent.empty();
+
+	}
 	
 	for(let i = 0; i < loc.length; i++){
 
