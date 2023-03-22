@@ -68,7 +68,7 @@ zipCodeBtn.on('click', function() {
     }
 });
 
-
+*/
 startQuiz = $('#startQuiz');
 questionPromp = $('#questionPromp');
 answers = $('.answers')
