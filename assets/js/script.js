@@ -27,6 +27,7 @@ const restaurantNear = {
 	}
 };
 
+/*
 coffeeQuiz.on('click', function() {
     console.log(restaurantNear)
 

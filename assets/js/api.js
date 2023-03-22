@@ -3,6 +3,9 @@ let lati = '';
 
 let rec; // recipes
 let loc; // location
+//let loop = loc.length;
+
+let test = ['','','','','',''];
 
 // external variable: let x = value of quiz score.
 let $x = 'flat_white'; // = quiz score;
@@ -38,14 +41,20 @@ function displayRecipes () {
 */
 
 function displayLocations () {
-	//let loop = loc.length;
+	
 	
 	for(let i = 0; i < loc.length; i++){
-	
-	let $newDiv = $("<div/>")
-		.addClass("card")
-		.html(loc[i].poi.name);
-	$("locations").append($newDiv);
+
+		let temp1 = loc[i].poi.name;
+		let temp2 = loc[i].address.streetNumber;
+		let temp3 = loc[i].address.streetName;
+		let temp4 = loc[i].poi.phone;
+		let $newDiv = $("<li/>")
+		.addClass("cafe")
+		.attr("style","background-color: beige")
+		.html(temp1 + ", " + temp2 + " " + temp3 + ", " + temp4);
+
+	$(".locations").append($newDiv);
 
 	}
 };
@@ -66,13 +75,14 @@ $(document).ready(function () {
 			console.log(data);
 			loc = data.results;
 
-	
+			displayLocations();
 		});
+		
 	}
 
 	// this is the search button function that will call for the cafes.
-	$(".btn1").click(function(){
-		let $zipCodeBtn = $("#zip-code-btn").val()
+	$("#zip-code-btn").click(function(){
+		let $zipCodeBtn = $(".form-control").val()
 
 		let apiKey = "4f9b9f0d81395d4880a33e43a1783f9e";
 		//console.log($zipCodeBtn);
@@ -85,7 +95,7 @@ $(document).ready(function () {
             return response.json();
         })
     	.then(function(data){
-        	console.log(data);
+        	//console.log(data);
 			//===========================
 			lati = data.city.coord.lat;
 			longi = data.city.coord.lon;
@@ -96,7 +106,7 @@ $(document).ready(function () {
 			
 		});
 	
-		//displayLocations();
+		
 		
 	});
 
