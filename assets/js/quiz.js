@@ -6,20 +6,20 @@ var choiceB = document.getElementById("choiceB");
 var choiceC = document.getElementById("choiceC");
 var choiceD = document.getElementById("choiceD");
 var startQuiz = document.getElementById("startQuiz");
-var startTimer = document.getElementById("startTimer");
+// var startTimer = document.getElementById("startTimer");
 var correctAlert = document.getElementById("correctAlert");
-var initials = document.getElementById("initials");
+
 var startTime = 500;
+
+// TO-DO : have the answer buttons hide until start quiz is clicked, only when i click buttons not the box element
+// answers.classList.add("hide");
 
 startQuiz.addEventListener("click", function () {
   mainBox.classList.remove("hide");
-
   renderQuestion();
 });
 
-// attempts to make it stop at zero and clear the mainbox upon hitting zero, clear mainbox againa and display form section
-
-
+// questions based around the data pulled from API, want to include coditional statements using boolean and array object in the data
 var questionPromp = [
   {
     question: "Would you like milk or Half-and-half?",
@@ -41,9 +41,9 @@ var questionPromp = [
     question: "Would you like milk foam?",
     choiceA: "Yes",
     choiceB: "None for me",
-    choiceC: "Some",
-    choiceD: "Lots",
-    correct: "choiceB",
+    choiceC: "",
+    choiceD: "",
+    correct: "choiceA",
   },
   {
     question: "Would you like to add chocolate syrup to your drink?",
@@ -51,7 +51,7 @@ var questionPromp = [
     choiceB: "No",
     choiceC: "",
     choiceD: "",
-    correct: "choiceC",
+    correct: "choiceA",
   },
   {
     question: "How do you like your coffee",
@@ -59,7 +59,7 @@ var questionPromp = [
     choiceB: "Hot",
     choiceC: "",
     choiceD: "",
-    correct: "choiceD",
+    correct: "choiceB",
   },
   {
     question: "Would you like to add a shot of alcohol?",
@@ -96,14 +96,31 @@ answersClick.addEventListener("click", function (event) {
 
 function checkAnswer(buttonClickID) {
   if (questionPromp[questionIndex].correct === buttonClickID) {
-    correctAlert.textContent = "Nice!";
-  } else {
     correctAlert.textContent = "Yum!";
+  } else {
+    correctAlert.textContent = "Nice!";
   }
+};
+
+
+// quiz end function so that drink is displayed, along with description and recepi for the drink
+function quizEnd() {
+  initials.classList.remove("hide");
+};
+  
 
   
 
-  // add a condition that gives a correct answer a point.
+
+
+
+
+
+
+
+
+
+// add a condition that gives a correct answer a point.
   // var finalScore = localStorage.getItem("points");
 
   // function correctScore(buttonClickID) {
@@ -112,29 +129,25 @@ function checkAnswer(buttonClickID) {
   //     } else {;
   //     }
 
-  questionIndex++;
-  if (startTime === 0 || questionIndex === questionPromp.length) {
-   console.log("hello"); 
-   console.log(questionIndex)
-   console.log(questionPromp.length)
-    quizEnd();
-  } else {
-    renderQuestion();
-    console.log("duck");
-  };
+  // questionIndex++;
+  // if (startTime === 0 || questionIndex === questionPromp.length) {
+  //  console.log("hello"); 
+  //  console.log(questionIndex)
+  //  console.log(questionPromp.length)
+  //   quizEnd();
+  // } else {
+  //   renderQuestion();
+  //   console.log("duck");
+  // };
  
-};
+
 // var nameBox = document.getElementById("answers");
 // function inputBox () {
 //   document.createElement("INPUT");
 // nameBox.setAttribute("type", "text");
 // };
 
-function quizEnd() {
-  startTime++;
-  initials.textContent = "Final Score:" + startTime;
-  initials.classList.remove("hide");
-  
+
 
   // initials.classList.remove ("hide");
   // mainBox.classList.add("hide");
@@ -150,5 +163,5 @@ function quizEnd() {
 //     console.log("container");
 // });
  
-}
+
 
