@@ -26,20 +26,32 @@ const coffeeRecipes = {
 $.ajax(coffeeRecipes).done(function (response) {
 	console.log(response);
 	rec = response;
+	displayRecipes();
 });
 
 
-// 
-/*
+
+
+// displayRecipes does exactly that. It's target is index.html under the quiz container. 
 function displayRecipes () {
-	let $newDiv = $("<div/>")
+	let counter = rec.recipe.ingredients.length;
+	let pHolder1 = rec.name;
+	let pHolder2 = [];
+
+	for(j = 0; j < counter; j++){
+		pHolder2.push(rec.recipe.ingredients[j]);
+	}
+	
+
+	let $newLi = $("<li/>")
 		.addClass("card")
-		.html(rec.name);
-	$("locations").append($newDiv);
+		.attr("style","background-color: lightblue; padding: 1%; border-radius: 12px; margin-top: 2%; list-style-type: none;transition: all 0.2s ease-in-out; background: linear-gradient(124deg, cadetblue, lightskyblue, lightsteelblue,lightblue, cornflowerblue); background-size: 1800% 1800%; -webkit-animation: rainbow 8s ease infinite;-z-animation: rainbow 8s ease infinite;-o-animation: rainbow 8s ease infinite;animation: rainbow 12s ease infinite;")
+		.html(pHolder1 + ": " + JSON.stringify(pHolder2.values));
+	$(".recipe-container").append($newLi);
 
 };
-*/
 
+// this function dynamically creates the html elements along with css attributes for the location api to display its results onto the page.
 function displayLocations () {
 
 	let $parent = $(".locations");
@@ -55,12 +67,12 @@ function displayLocations () {
 		let temp2 = loc[i].address.streetNumber;
 		let temp3 = loc[i].address.streetName;
 		let temp4 = loc[i].poi.phone;
-		let $newDiv = $("<li/>")
+		let $newLi = $("<li/>")
 		.addClass("card")
 		.attr("style","background-color: beige; padding: 1%; border-radius: 12px; margin-top: 2%; list-style-type: none")
 		.html(temp1 + ", " + temp2 + " " + temp3 + ", " + temp4);
 
-	$(".locations").append($newDiv);
+	$(".locations").append($newLi);
 
 	}
 };
