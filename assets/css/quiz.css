@@ -9,6 +9,10 @@ body {
   margin-top: 5%;
 }
 
+.hide {
+  display: none;
+}
+
 /* Style the "Start Quiz" button */
 #startQuiz {
   background-color: #a67c4a;
