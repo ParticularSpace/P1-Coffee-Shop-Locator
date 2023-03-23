@@ -1,4 +1,4 @@
-# A4-Timed-JS-Quiz
+# P1-Coffee-Shop-Locator
 
 ## URL
 
