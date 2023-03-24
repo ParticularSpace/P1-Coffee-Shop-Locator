@@ -95,9 +95,10 @@ function quizEnd() {
   localStorage.setItem("coffeeType", coffeeType);
 
   //api info for the coffee type
-
+ 
   // hide the quiz section and display the initials input box
   mainBox.classList.add("hide");
+  window.location.href = "index.html";
 }
 console.log(choices)
 // function to assign a coffee type based on user choices
