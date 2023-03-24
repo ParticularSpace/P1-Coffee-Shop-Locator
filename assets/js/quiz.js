@@ -24,49 +24,31 @@ var questionPromp = [
     question: "Coffee bitter or sweet?",
     choiceA: "Bitter",
     choiceB: "Sweet",
-    choiceC: "",
-    choiceD: "",
-    correct: "choiceA",
   },
   {
     question: "Which one do you prefer?",
     choiceA: "Milk",
     choiceB: "Non-dairy",
-    choiceC: "",
-    choiceD: "",
-    correct: "choiceA",
   },
   {
     question: "Would you like foam?",
     choiceA: "Yes",
     choiceB: "None for me",
-    choiceC: "",
-    choiceD: "",
-    correct: "choiceA",
   },
   {
     question: "Would you like to add chocolate syrup to your drink?",
     choiceA: "Yes",
     choiceB: "No",
-    choiceC: "",
-    choiceD: "",
-    correct: "choiceA",
   },
   {
     question: "How do you like your coffee",
     choiceA: "Iced",
     choiceB: "Hot",
-    choiceC: "",
-    choiceD: "",
-    correct: "choiceB",
   },
   {
     question: "Would you like to add a shot of espresso?",
     choiceA: "Please",
     choiceB: "Uh, no thanks",
-    choiceC: "",
-    choiceD: "",
-    correct: "choiceB",
   },
 ];
 
@@ -81,7 +63,10 @@ function renderQuestion() {
   question.textContent = q.question;
   choiceA.innerHTML = q.choiceA;
   choiceB.innerHTML = q.choiceB;
+  console.log(q);
 }
+
+
 
 var answersClick = document.querySelector("section");
 
@@ -91,12 +76,6 @@ answersClick.addEventListener("click", function (event) {
 });
 
 function checkAnswer(buttonClickID) {
-  if (questionPromp[questionIndex].correct === buttonClickID) {
-    correctAlert.textContent = "Yum!";
-  } else {
-    correctAlert.textContent = "Nice!";
-  }
-
   // add the user's choice to an array
   choices.push(buttonClickID);
 
@@ -123,15 +102,15 @@ function quizEnd() {
   // hide the quiz section and display the initials input box
   mainBox.classList.add("hide");
 }
-
+console.log(choices)
 // function to assign a coffee type based on user choices
 function getCoffeeType(choices) {
   // define the coffee types and their corresponding question numbers
   var coffeeTypes = [
-    {name: "latte", questions: [0, 1, 2]},
-    {name: "cappuccino", questions: [3, 4, 5]},
-    {name: "iced coffee", questions: [1, 2, 4]},
-    {name: "espresso", questions: [0, 2, 5]},
+    {name: "latte", questions: [0, 1, 2,3]},
+    {name: "cappuccino", questions: [0, 1, 2, 4]},
+    {name: "iced coffee", questions: [0, 1, 3, 4]},
+    {name: "espresso", questions: [0, 2, 3, 5]},
     {name: "macchiato", questions: [1, 3, 5]},
   ];
 
@@ -159,8 +138,10 @@ function getCoffeeType(choices) {
       coffeeType = coffeeTypes[i].name;
     }
   }
+  console.log(maxCount)
   console.log(coffeeType);
   return coffeeType;
+
 }
 
 
