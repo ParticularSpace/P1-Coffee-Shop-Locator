@@ -3,10 +3,7 @@ const question = document.getElementById("questionPromp");
 const mainBox = document.getElementById("box");
 var choiceA = document.getElementById("choiceA");
 var choiceB = document.getElementById("choiceB");
-var choiceC = document.getElementById("choiceC");
-var choiceD = document.getElementById("choiceD");
 var startQuiz = document.getElementById("startQuiz");
-var correctAlert = document.getElementById("correctAlert");
 
 var startTime = 500;
 
