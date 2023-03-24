@@ -3,10 +3,7 @@ const question = document.getElementById("questionPromp");
 const mainBox = document.getElementById("box");
 var choiceA = document.getElementById("choiceA");
 var choiceB = document.getElementById("choiceB");
-var choiceC = document.getElementById("choiceC");
-var choiceD = document.getElementById("choiceD");
 var startQuiz = document.getElementById("startQuiz");
-var correctAlert = document.getElementById("correctAlert");
 
 var startTime = 500;
 
@@ -24,49 +21,31 @@ var questionPromp = [
     question: "Coffee bitter or sweet?",
     choiceA: "Bitter",
     choiceB: "Sweet",
-    choiceC: "",
-    choiceD: "",
-    correct: "choiceA",
   },
   {
     question: "Which one do you prefer?",
     choiceA: "Milk",
     choiceB: "Non-dairy",
-    choiceC: "",
-    choiceD: "",
-    correct: "choiceA",
   },
   {
     question: "Would you like foam?",
     choiceA: "Yes",
     choiceB: "None for me",
-    choiceC: "",
-    choiceD: "",
-    correct: "choiceA",
   },
   {
     question: "Would you like to add chocolate syrup to your drink?",
     choiceA: "Yes",
     choiceB: "No",
-    choiceC: "",
-    choiceD: "",
-    correct: "choiceA",
   },
   {
     question: "How do you like your coffee",
     choiceA: "Iced",
     choiceB: "Hot",
-    choiceC: "",
-    choiceD: "",
-    correct: "choiceB",
   },
   {
     question: "Would you like to add a shot of espresso?",
     choiceA: "Please",
     choiceB: "Uh, no thanks",
-    choiceC: "",
-    choiceD: "",
-    correct: "choiceB",
   },
 ];
 
@@ -81,7 +60,10 @@ function renderQuestion() {
   question.textContent = q.question;
   choiceA.innerHTML = q.choiceA;
   choiceB.innerHTML = q.choiceB;
+  console.log(q);
 }
+
+
 
 var answersClick = document.querySelector("section");
 
@@ -91,12 +73,6 @@ answersClick.addEventListener("click", function (event) {
 });
 
 function checkAnswer(buttonClickID) {
-  if (questionPromp[questionIndex].correct === buttonClickID) {
-    correctAlert.textContent = "Yum!";
-  } else {
-    correctAlert.textContent = "Nice!";
-  }
-
   // add the user's choice to an array
   choices.push(buttonClickID);
 
@@ -124,23 +100,22 @@ function quizEnd() {
   mainBox.classList.add("hide");
   window.location.href = "index.html";
 }
-
+console.log(choices)
 // function to assign a coffee type based on user choices
 function getCoffeeType(choices) {
   // define the coffee types and their corresponding question numbers
-  var coffeeTypes = [
-    {name: "latte", questions: [0, 1, 2]},
-    {name: "cappuccino", questions: [3, 4, 5]},
-    {name: "iced coffee", questions: [1, 2, 4]},
-    {name: "espresso", questions: [0, 2, 5]},
-    {name: "macchiato", questions: [1, 3, 5]},
+  var coffeeTypes = [    
+    {name: "latte", questions: [0, 1]},
+    {name: "cappuccino", questions: [2, 3]},
+    {name: "iced coffee", questions: [1, 3, 4]},
+    {name: "espresso", questions: [0, 3]},
+    {name: "macchiato", questions: [1, 2]},
   ];
 
   // count the number of times each choice was selected
-  var counts = {choiceA: 0, choiceB: 0, choiceC: 0, choiceD: 0};
+  var counts = {choiceA: 0, choiceB: 0};
   for (var i = 0; i < choices.length; i++) {
     counts[choices[i]]++;
-
   }
 
   // determine which coffee type has the most questions answered in its favor
@@ -160,8 +135,11 @@ function getCoffeeType(choices) {
       coffeeType = coffeeTypes[i].name;
     }
   }
-  console.log(coffeeType);
+  console.log(coffeeType)
   return coffeeType;
 }
+
+
+
 
 
