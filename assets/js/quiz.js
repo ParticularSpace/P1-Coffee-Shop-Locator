@@ -106,19 +106,18 @@ console.log(choices)
 // function to assign a coffee type based on user choices
 function getCoffeeType(choices) {
   // define the coffee types and their corresponding question numbers
-  var coffeeTypes = [
-    {name: "latte", questions: [0, 1, 2,3]},
-    {name: "cappuccino", questions: [0, 1, 2, 4]},
-    {name: "iced coffee", questions: [0, 1, 3, 4]},
-    {name: "espresso", questions: [0, 2, 3, 5]},
-    {name: "macchiato", questions: [1, 3, 5]},
+  var coffeeTypes = [    
+    {name: "latte", questions: [0, 1]},
+    {name: "cappuccino", questions: [2, 3]},
+    {name: "iced coffee", questions: [1, 3, 4]},
+    {name: "espresso", questions: [0, 3]},
+    {name: "macchiato", questions: [1, 2]},
   ];
 
   // count the number of times each choice was selected
-  var counts = {choiceA: 0, choiceB: 0, choiceC: 0, choiceD: 0};
+  var counts = {choiceA: 0, choiceB: 0};
   for (var i = 0; i < choices.length; i++) {
     counts[choices[i]]++;
-
   }
 
   // determine which coffee type has the most questions answered in its favor
@@ -138,10 +137,11 @@ function getCoffeeType(choices) {
       coffeeType = coffeeTypes[i].name;
     }
   }
-  console.log(maxCount)
-  console.log(coffeeType);
+  console.log(coffeeType)
   return coffeeType;
-
 }
+
+
+
 
 
