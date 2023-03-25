@@ -14,12 +14,12 @@ body {
 
 input[type=text],
 input[type=password] {
-    width: 100%;
-    font-size: 28px;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
+    width: 50%;
+    font-size: 15px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
     background: #f1f1f1;
 }
 
@@ -41,13 +41,13 @@ hr {
 button {
     font-size: 18px;
     font-weight: bold;
-    background-color: #3C2415;
+    background-color: #04AA6D;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 10%;
     opacity: 0.9;
 }
 
@@ -56,6 +56,7 @@ button:hover {
 }
 
 .cancel {
+    width: 10%;
     padding: 14px 20px;
     background-color: #ff3d2f;
 }
@@ -65,14 +66,14 @@ button:hover {
 }
 
 .formContainer p {
-    font-size: 28px;
+    font-size: 20px;
 }
 </style>
 
 <body>
     <form>
         <div class="formContainer">
-            <h1>Sign Up Form</h1>
+            <h2>Sign Up Form</h2>
             <hr>
             <label for="email"><b>Email</b></label>
             <input type="text" placeholder="Enter Email" name="email" required>
