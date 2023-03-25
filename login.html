@@ -14,10 +14,10 @@
 
       input[type=text],
       input[type=password] {
-        width: 100%;
+        width: 50%;
         padding: 12px 20px;
         margin: 8px 0;
-        display: inline-block;
+        display: block;
         border: 1px solid #ccc;
         box-sizing: border-box;
       }
@@ -28,8 +28,8 @@
         padding: 14px 20px;
         margin: 8px 0;
         border: none;
-        cursor: pointer;
-        width: 100%;
+        cursor: alias;
+        width: 50%;
       }
 
       button:hover {
@@ -37,9 +37,15 @@
       }
 
       .cancelbtn {
-        width: auto;
-        padding: 10px 18px;
+        width: 10%;
+        padding: 14px 20px;
         background-color: #f44336;
+      }
+
+      .pswbtn {
+        width: 10%;
+        padding: 14px;
+        background-color: black;
       }
 
       .imgcontainer {
@@ -54,11 +60,6 @@
 
       .container {
         padding: 16px;
-      }
-
-      span.psw {
-        float: right;
-        padding-top: 16px;
       }
 
       /* Change styles for span and cancel button on extra small screens */
@@ -85,9 +86,11 @@
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me </label>
     </div>
-    <div class="container" style="background-color:#f1f1f1">
+    <div class="container" style="background-color:#F2E6D8">
       <button type="button" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <button type="button" class="pswbtn">
+        <href="#">Forgot password?</href>
+      </button>
     </div>
     </form>
   </body>
