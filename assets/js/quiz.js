@@ -10,12 +10,15 @@ var startTime = 500;
 // TO-DO : have the answer buttons hide until start quiz is clicked, only when i click buttons not the box element
 
 startQuiz.addEventListener("click", function () {
-  mainBox.classList.remove("hide");
+  // hide the start quiz button
   startQuiz.classList.add("hide");
+  // show the quiz section
+  mainBox.classList.remove("hide");
   renderQuestion();
 });
 
 
+// array of questions and answers
 var questionPromp = [
   {
     question: "Coffee bitter or sweet?",
@@ -49,6 +52,7 @@ var questionPromp = [
   },
 ];
 
+
 const lastQuestion = questionPromp.length - 1;
 
 var questionIndex = 0;
@@ -63,14 +67,14 @@ function renderQuestion() {
   console.log(q);
 }
 
-
-
+// check the answer
 var answersClick = document.querySelector("section");
 
 answersClick.addEventListener("click", function (event) {
   var buttonClickID = event.target.id;
   checkAnswer(buttonClickID);
 });
+
 
 function checkAnswer(buttonClickID) {
   // add the user's choice to an array
@@ -86,8 +90,9 @@ function checkAnswer(buttonClickID) {
   }
 }
 
+// function to end the quiz
 function quizEnd() {
-  
+
   // assign a coffee type based on user choices
   coffeeType = getCoffeeType(choices);
 
@@ -95,7 +100,7 @@ function quizEnd() {
   localStorage.setItem("coffeeType", coffeeType);
 
   //api info for the coffee type
- 
+
   // hide the quiz section and display the initials input box
   mainBox.classList.add("hide");
   window.location.href = "index.html";
@@ -104,16 +109,16 @@ console.log(choices)
 // function to assign a coffee type based on user choices
 function getCoffeeType(choices) {
   // define the coffee types and their corresponding question numbers
-  var coffeeTypes = [    
-    {name: "latte", questions: [0, 1]},
-    {name: "cappuccino", questions: [2, 3]},
-    {name: "iced coffee", questions: [1, 3, 4]},
-    {name: "espresso", questions: [0, 3]},
-    {name: "macchiato", questions: [1, 2]},
+  var coffeeTypes = [
+    { name: "latte", questions: [0, 1] },
+    { name: "cappuccino", questions: [2, 3] },
+    { name: "iced coffee", questions: [1, 3, 4] },
+    { name: "espresso", questions: [0, 3] },
+    { name: "macchiato", questions: [1, 2] },
   ];
 
   // count the number of times each choice was selected
-  var counts = {choiceA: 0, choiceB: 0};
+  var counts = { choiceA: 0, choiceB: 0 };
   for (var i = 0; i < choices.length; i++) {
     counts[choices[i]]++;
   }
@@ -138,8 +143,3 @@ function getCoffeeType(choices) {
   console.log(coffeeType)
   return coffeeType;
 }
-
-
-
-
-
