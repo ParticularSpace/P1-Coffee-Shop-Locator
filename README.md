@@ -29,7 +29,7 @@ UC Berkeley Coding Bootcamp Extension
 
 MIT License
 
-Copyright (c) 2022 JP Padilla
+Copyright (c) 2023 Sam Jones
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -43,7 +43,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Base questions around these 6 elements from the arrays in the API. based in how they answer questions a drink will be recommended and recipe will render 
 Half-and-half (Would you like milk or Half-and-half)
 Milk
-Milk foam (would you like milk foam?
+Milk foam (would you like milk foam?)
 Chocolate Syrup (chocolate syrup in your drink?)
 Iced (Hot or iced)
 Alcohol. (would you like to add a shot of alcohol).
