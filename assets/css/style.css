@@ -1,132 +1,150 @@
 body {
-    background-color: #D2B48C;
-    color: #3C2415;
-    height: 100vh;
-  }
-
-  .cover-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 42em;
-    margin: 0 auto;
-    background-color: #F2E6D8;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    background-color: #D1C3A9;
-    padding: 0 ;
-    border-radius: 5px;
-  }
-
-  .rounded-image {
-    border-radius: 20px;
+  background-color: #d2b48c;
+  color: #3c2415;
+  height: 100vh;
 }
 
-  
-  h1 {
-    color: #3C2415;
-  }
-  
-  h3, nav a {
-    color: #3C2415;
-    font-size: 30px;
-  }
+.cover-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 42em;
+  margin: 0 auto;
+  background-color: #f2e6d8;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
 
-  h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-top: 1rem;
-  }
-  
-  .form-control {
-    background-color: #E5D5B1;
-    color: #3C2415;
-    border-radius: 20px;
-    height: 50px;
-    padding: 0 20px;
-    border: none;
-  }
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  background-color: #d1c3a9;
+  padding: 0;
+  border-radius: 5px;
+}
 
-  
-  .primary-btn {
-    text-align: center;
-    background-color: #3C2415;
-    color: #F2E6D8;
-    border-radius: 10px;
-    border: none;
-    height: 50px;
-    width: 150px;
-    margin-left: 20px;
-    
-  }
+.rounded-image {
+  border-radius: 20px;
+}
 
-  #startQuiz {
-    text-align: center;
-    background-color: #3C2415;
-    color: #F2E6D8;
-    border-radius: 20px;
-    border: none;
-    height: 50px;
-    width: 150px;
-    margin-left: 20px;
-    
-  }
-  
-  .primary-btn:hover {
-    background-color: #634A34;
-  }
-  
-  .container-quiz {
-    text-align: center;
-    margin-top: 2em;
-    border: 2px solid #D1C3A9;
-    border-radius: 20px;
-    padding: 20px;
-    background-color: #F2E6D8;
-  }
+h1 {
+  color: #3c2415;
+}
 
-  .container-search {
-    text-align: center;
-    margin-top: 2em;
-    border: 2px solid #D1C3A9;
-    border-radius: 20px;
-    padding: 20px;
-    background-color: #F2E6D8;
-  }
-  
-  .zip-data {
-    margin-top: 1em;
-  }
+h3,
+nav a {
+  color: #3c2415;
+  font-size: 20px;
+}
 
-  @-webkit-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
-}      
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.form-control {
+  background-color: #e5d5b1;
+  color: #3c2415;
+  border-radius: 20px;
+  height: 50px;
+  padding: 0 20px;
+  border: none;
+}
+
+.primary-btn {
+  text-align: center;
+  background-color: #3c2415;
+  color: #f2e6d8;
+  border-radius: 10px;
+  border: none;
+  height: 50px;
+  width: 150px;
+  margin-left: 20px;
+}
+
+#startQuiz {
+  text-align: center;
+  background-color: #3c2415;
+  color: #f2e6d8;
+  border-radius: 20px;
+  border: none;
+  height: 50px;
+  width: 150px;
+  margin-left: 20px;
+}
+
+.primary-btn:hover {
+  background-color: #634a34;
+}
+
+.container-quiz {
+  text-align: center;
+  margin-top: 2em;
+  border: 2px solid #d1c3a9;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #f2e6d8;
+}
+
+.container-search {
+  text-align: center;
+  margin-top: 2em;
+  border: 2px solid #d1c3a9;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #f2e6d8;
+}
+
+.zip-data {
+  margin-top: 1em;
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
 @-moz-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
 }
 @-o-keyframes rainbow {
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
 }
-@keyframes rainbow { 
-    0%{background-position:0% 82%}
-    50%{background-position:100% 19%}
-    100%{background-position:0% 82%}
+@keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
 }
-
-  
-  
