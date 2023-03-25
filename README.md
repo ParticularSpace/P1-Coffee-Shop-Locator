@@ -14,7 +14,7 @@ Are you tired of trying to figure out your perfect coffee? Well look no further,
 Click the start quiz to begin the coffee quiz when finished you can go back to the home screen to enter your zip to find your local shop!    
 
 ## Screenshot
-![A picture of the webpage](assets/images/screenschot.png "Coffee Locator")
+![A picture of the webpage](/assets/images/Screenshot%202023-03-24%20at%208.10.47%20PM.png "Coffee Locator")
 
 ## Credits
 Students:
