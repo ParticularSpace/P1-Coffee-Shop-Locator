@@ -14,7 +14,7 @@ Are you tired of trying to figure out your perfect coffee? Well look no further,
 Click the start quiz to begin the coffee quiz when finished you can go back to the home screen to enter your zip to find your local shop!    
 
 ## Screenshot
-![A picture of the webpage](assets/images/screenschot.png "Coffee Locator")
+![A picture of the webpage](/assets/images/Screenshot%202023-03-24%20at%208.10.47%20PM.png "Coffee Locator")
 
 ## Credits
 Students:
@@ -29,7 +29,7 @@ UC Berkeley Coding Bootcamp Extension
 
 MIT License
 
-Copyright (c) 2022 JP Padilla
+Copyright (c) 2023 Sam Jones
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -43,7 +43,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Base questions around these 6 elements from the arrays in the API. based in how they answer questions a drink will be recommended and recipe will render 
 Half-and-half (Would you like milk or Half-and-half)
 Milk
-Milk foam (would you like milk foam?
+Milk foam (would you like milk foam?)
 Chocolate Syrup (chocolate syrup in your drink?)
 Iced (Hot or iced)
 Alcohol. (would you like to add a shot of alcohol).
