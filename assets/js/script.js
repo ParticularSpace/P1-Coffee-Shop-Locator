@@ -82,7 +82,7 @@ function displayLocations () {
 		let temp4 = loc[i].poi.phone;
 		let $newLi = $("<li/>")
 		.addClass("card")
-		.attr("style","background-color: beige; padding: 1%; border-radius: 12px; margin-top: 2%; list-style-type: none")//;transition: all 0.2s ease-in-out; background: linear-gradient(124deg, cadetblue, lightskyblue, lightsteelblue,lightblue, cornflowerblue); background-size: 1800% 1800%; -webkit-animation: rainbow 8s ease infinite;-z-animation: rainbow 8s ease infinite;-o-animation: rainbow 8s ease infinite;animation: rainbow 12s ease infinite;
+		.attr("style","background-color: beige; padding: 1%; border-radius: 12px; margin-top: 2%; list-style-type: none;transition: all 0.2s ease-in-out; background: linear-gradient(beige, blanchedalmond, #e5d5b1, blanchedalmond, linen); background-size: 1800% 1800%; -webkit-animation: rainbow 8s ease infinite;-z-animation: rainbow 4s ease infinite;-o-animation: rainbow 4s ease infinite;animation: rainbow 6s ease infinite;")//
 		.html(temp1 + ", " + temp2 + " " + temp3 + ", " + temp4);
 
 	$(".locations").append($newLi);
