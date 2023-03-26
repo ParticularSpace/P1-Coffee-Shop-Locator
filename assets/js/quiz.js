@@ -12,6 +12,8 @@ var startTime = 500;
 startQuiz.addEventListener("click", function () {
   // hide the start quiz button
   startQuiz.classList.add("hide");
+  choiceA.classList.remove("hide");
+  choiceB.classList.remove("hide");
   // show the quiz section
   mainBox.classList.remove("hide");
   renderQuestion();
