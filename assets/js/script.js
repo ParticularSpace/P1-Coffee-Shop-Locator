@@ -62,11 +62,12 @@ let loc; // location
 		let $newLi = $("<li/>")
 			.addClass("card remover")
 			.attr("onClick","ridLocalStorage()","style","background-color: lightblue; padding: 1%; border-radius: 12px; margin-top: 2%; list-style-type: none;transition: all 0.2s ease-in-out; background: linear-gradient(124deg, cadetblue, lightskyblue, lightsteelblue,lightblue, cornflowerblue); background-size: 1800% 1800%; -webkit-animation: rainbow 8s ease infinite;-z-animation: rainbow 8s ease infinite;-o-animation: rainbow 8s ease infinite;animation: rainbow 12s ease infinite;")
-			//.html(pHolder1 + ": " + pHolder2.join(", ") + "... " + pHolder3.join(", "));
+			//.html(pHolder1 + ": " + pHolder2.join(", ") + "... " + pHolder3.join(", "));//
 			.html("x");
 		$(".recipe-container").append($newLi);
 		
 	};
+// option to remove stored quiz results.
 function ridLocalStorage(){
 	
 	localStorage.clear();
