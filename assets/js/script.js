@@ -162,6 +162,6 @@ $(document).ready(function() {
 	});
 	takeQuiz.on('click', function() {
 		//take me to quiz.html
-		window.location.href = "quiz.html";
+		window.location.href = "pages/quiz.html";
 	});
 	});
