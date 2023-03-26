@@ -102,8 +102,8 @@ function quizEnd() {
   //api info for the coffee type
 
   // hide the quiz section and display the initials input box
-  mainBox.classList.add("hide");
-  window.location.href = "index.html";
+  // mainBox.classList.add("hide");
+  window.location.href = "../index.html";
 }
 console.log(choices)
 // function to assign a coffee type based on user choices
@@ -112,9 +112,14 @@ function getCoffeeType(choices) {
   var coffeeTypes = [
     { name: "latte", questions: [0, 1] },
     { name: "cappuccino", questions: [2, 3] },
-    { name: "iced coffee", questions: [1, 3, 4] },
+    { name: "iced_coffee", questions: [1, 3, 4] },
     { name: "espresso", questions: [0, 3] },
     { name: "macchiato", questions: [1, 2] },
+    { name: "americano", questions: [0, 4] },
+    { name: "mocha", questions: [0, 1, 2, 3] },
+    { name: "breve", questions: [0, 1, 2] },
+    { name: "flat_white", questions: [0, 1, 2, 3] },
+    
   ];
 
   // count the number of times each choice was selected
