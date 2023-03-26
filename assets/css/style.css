@@ -16,9 +16,13 @@ body {
   padding: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
-
-.card:hover {
-  box-shadow: 0 0 20px 5px lightblue;
+.remover{
+  background-color: lightblue; padding: 1%; border-radius: 12px; margin-top: 2%; list-style-type: none;transition: all 0.2s ease-in-out; background: linear-gradient(124deg, cadetblue, lightskyblue, lightsteelblue,lightblue, cornflowerblue); background-size: 1800% 1800%; -webkit-animation: rainbow 8s ease infinite;-z-animation: rainbow 8s ease infinite;-o-animation: rainbow 8s ease infinite;animation: rainbow 12s ease infinite;
+}
+.remover:hover {
+  transition: transform 0.2s;
+  box-shadow: 0 0 18px 4px lightcoral;
+  transform: scale(.97);
 }
 
 header {
