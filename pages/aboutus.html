@@ -25,7 +25,7 @@
         float: left;
         width: 50%;
         margin-bottom: 16px;
-        padding: 50px;
+        padding: 40px;
       }
 
       .card {
@@ -44,6 +44,17 @@
         padding: 16px;
       }
 
+      .title {
+        font-size: 30px;
+        color: grey;
+      }
+
+      .image {
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 10px;
+      }
+
       .container::after,
       .row::after {
         content: "";
@@ -52,6 +63,8 @@
       }
 
       .title {
+        margin-top: 60px;
+        font-size: 30px;
         color: grey;
       }
 
@@ -84,11 +97,11 @@
       <h1>About Us Page</h1>
       <p>We are graduates of UC Berkeley Coding Bootcamp! This is Project 1: Coffee Locator.</p>
     </div>
-    <h2 style="text-align:center">The Team</h2>
+    <h2 class="title" style="text-align:center">The Team</h2>
     <div class="container">
       <div class="column">
         <div class="card">
-          <img src="../assets/images/scrumMaster.png" alt="Sam" style=" width: 40%">
+          <img class="image" src="../assets/images/scrumMaster.png" alt="Sam" style=" width: 40%">
           <div class="container">
             <h2>Sam Jones</h2>
             <p class="title">Scrum Master</p>
@@ -100,7 +113,7 @@
       </div>
       <div class="column">
         <div class="card">
-          <img src="../assets/images/apiMaster.png" alt="Al" style="width: 40%">
+          <img class="image" src="../assets/images/apiMaster.png" alt="Al" style="width: 40%">
           <div class="container">
             <h2>Al Hernandez</h2>
             <p class="title">API Master</p>
@@ -112,7 +125,7 @@
       </div>
       <div class="column">
         <div class="card">
-          <img src="../assets/images/quizMaster.png" alt="Jose" style="width:40%">
+          <img class="image" src="../assets/images/quizMaster.png" alt="Jose" style="width:40%">
           <div class="container">
             <h2>Jose Escoto</h2>
             <p class="title">Quiz Master</p>
@@ -124,7 +137,7 @@
       </div>
       <div class="column">
         <div class="card">
-          <img src="../assets/images/cleanUp.png" alt="Jonathan" style="width:40%">
+          <img class="image" src="../assets/images/cleanUp.png" alt="Jonathan" style="width:40%">
           <div class="container">
             <h2>Jonathan Fadera</h2>
             <p class="title">Clean-Up Master</p>
