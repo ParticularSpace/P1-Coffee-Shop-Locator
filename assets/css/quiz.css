@@ -5,34 +5,40 @@ body {
 
 /* Style the title */
 .title {
-  color: #f5d5cb;
+  color: #fdfdfd;
   margin-top: 5%;
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 /* Style the "Start Quiz" button */
 #startQuiz {
-  background-color: #a67c4a;
-  color: #f5d5cb;
+  background-color: #574423;
+  color: #fefefe;
   margin-top: 5%;
   border-radius: 20px;
   height: 40px;
   width: 120px;
   font-size: 18px;
-  display: block;
+  display: center;
   margin: 0 auto;
+}
+
+#startQuiz:hover {
+  background-color: #f8f8f8;
+  color: #6f4e37;
 }
 
 /* Style the main box */
 #box {
-  background-color: #f5d5cb;
+  background-color: #f0e2c2;
   color: #6f4e37;
   margin-top: 5%;
   padding: 2%;
   border-radius: 10px;
+  height: 100vh;
 }
 
 /* Style the question prompt */
