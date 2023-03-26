@@ -1,11 +1,12 @@
 const answers = document.querySelectorAll("button.answer");
 const question = document.getElementById("questionPromp");
 const mainBox = document.getElementById("box");
-var choiceA = document.getElementById("choiceA");
-var choiceB = document.getElementById("choiceB");
-var startQuiz = document.getElementById("startQuiz");
+const choiceA = document.getElementById("choiceA");
+const choiceB = document.getElementById("choiceB");
+const startQuiz = document.getElementById("startQuiz");
+const tutorial = document.getElementById("tutorial");
 
-var startTime = 500;
+const startTime = 500;
 
 // TO-DO : have the answer buttons hide until start quiz is clicked, only when i click buttons not the box element
 
@@ -16,6 +17,7 @@ startQuiz.addEventListener("click", function () {
   choiceB.classList.remove("hide");
   // show the quiz section
   mainBox.classList.remove("hide");
+  tutorial.classList.remove("hide");
   renderQuestion();
 });
 
@@ -66,7 +68,6 @@ function renderQuestion() {
   question.textContent = q.question;
   choiceA.innerHTML = q.choiceA;
   choiceB.innerHTML = q.choiceB;
-  console.log(q);
 }
 
 // check the answer
@@ -107,7 +108,7 @@ function quizEnd() {
   // mainBox.classList.add("hide");
   window.location.href = "../index.html";
 }
-console.log(choices)
+
 // function to assign a coffee type based on user choices
 function getCoffeeType(choices) {
   // define the coffee types and their corresponding question numbers
