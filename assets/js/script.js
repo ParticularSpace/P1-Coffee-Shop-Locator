@@ -164,4 +164,5 @@ $(document).ready(function() {
 		//take me to quiz.html
 		window.location.href = "pages/quiz.html";
 	});
-	});
+
+
