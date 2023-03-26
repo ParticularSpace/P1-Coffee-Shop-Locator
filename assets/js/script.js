@@ -165,4 +165,4 @@ $(document).ready(function() {
 		window.location.href = "pages/quiz.html";
 	});
 
-
+});
