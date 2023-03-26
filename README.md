@@ -46,14 +46,14 @@ Milk
 Milk foam (would you like milk foam?)
 Chocolate Syrup (chocolate syrup in your drink?)
 Iced (Hot or iced)
-Alcohol. (would you like to add a shot of alcohol).
+Espresso (would you like to add a shot of espresso).
 
-Drink list for results 
+Drink list for results:
+
 Mocha -- if chocolate syrup
 Machiatto_latte if milk and milk foam
 Breve - if half-and half
 Latte - if milk foam
 Americano - no milk, no syrup, no half-and half
-Irish_coffee - alcohol
 Frappuccino - if iced, and milk
 Flat_white - if milk.

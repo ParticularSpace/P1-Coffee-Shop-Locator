@@ -147,3 +147,9 @@ h1 {
     background-position: 0% 82%;
   }
 }
+
+@media screen and (max-width: 500px) {
+  #zip-code-btn {
+    margin-top: 10px;
+  }
+}
