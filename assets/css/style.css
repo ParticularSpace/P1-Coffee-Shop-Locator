@@ -6,7 +6,7 @@ body {
   overflow: auto;
 }
 
-
+/* General styling */
 .cover-container {
   display: flex;
   flex-direction: column;
@@ -114,6 +114,8 @@ h1 {
   margin-top: 1em;
 }
 
+/* Sets animation results */
+
 @-webkit-keyframes rainbow {
   0% {
     background-position: 0% 82%;
@@ -159,12 +161,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 500px) {
-  #zip-code-btn {
-    margin-top: 10px;
-  }
-}
-
+/* Modal display */
 .modal {
   display: none;
   position: fixed;
@@ -199,4 +196,11 @@ h1 {
 }
 .showModal{
   display: block;
+}
+
+/* Responsive layout also using Bulma */
+@media screen and (max-width: 500px) {
+  #zip-code-btn {
+    margin-top: 10px;
+  }
 }

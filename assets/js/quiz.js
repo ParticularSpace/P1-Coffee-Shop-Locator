@@ -96,10 +96,10 @@ function checkAnswer(buttonClickID) {
 // function to end the quiz
 function quizEnd() {
 
-  // assign a coffee type based on user choices
+  //assign a coffee type based on user choices
   coffeeType = getCoffeeType(choices);
 
-  //i want to set coffeeType to local storage
+  //set coffeeType to local storage
   localStorage.setItem("coffeeType", coffeeType);
 
   //api info for the coffee type
@@ -113,17 +113,16 @@ function quizEnd() {
 function getCoffeeType(choices) {
   // define the coffee types and their corresponding question numbers
   var coffeeTypes = [
-    { name: "latte", questions: [0, 1] },
-    { name: "cappuccino", questions: [2, 3] },
-    { name: "iced_coffee", questions: [1, 3, 4] },
-    { name: "espresso", questions: [0, 3] },
+    { name: "latte", questions: [0, 1, 5] },
+    { name: "cappuccino", questions: [2, 3, 5] },
+    { name: "iced_coffee", questions: [1, 3, 4, 5] },
+    { name: "espresso", questions: [0, 3, 5] },
     { name: "macchiato", questions: [1, 2] },
-    { name: "americano", questions: [0, 4] },
+    { name: "americano", questions: [0, 1, 5] },
     { name: "mocha", questions: [0, 1, 2, 3] },
     { name: "breve", questions: [0, 1, 2] },
     { name: "flat_white", questions: [0, 1, 2, 3] },
     { name: "frappuccino", questions: [0, 1, 2, 3, 4] },
-    
   ];
 
   // count the number of times each choice was selected
@@ -144,6 +143,7 @@ function getCoffeeType(choices) {
         typeCount--;
       }
     }
+    // if the coffee type has more questions answered in its favor than the current max, set it as the new max
     if (typeCount > maxCount) {
       maxCount = typeCount;
       coffeeType = coffeeTypes[i].name;
