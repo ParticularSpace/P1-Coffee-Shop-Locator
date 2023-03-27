@@ -122,6 +122,7 @@ function getCoffeeType(choices) {
     { name: "mocha", questions: [0, 1, 2, 3] },
     { name: "breve", questions: [0, 1, 2] },
     { name: "flat_white", questions: [0, 1, 2, 3] },
+    { name: "frappuccino", questions: [0, 1, 2, 3, 4] },
     
   ];
 

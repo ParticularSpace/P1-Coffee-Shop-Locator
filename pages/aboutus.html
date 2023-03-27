@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>About The Beans</title>
+    <title>About The Team</title>
     <style>
       body {
         font-family: Arial, Helvetica, sans-serif;
@@ -25,7 +25,7 @@
         float: left;
         width: 50%;
         margin-bottom: 16px;
-        padding: 50px;
+        padding: 40px;
       }
 
       .card {
@@ -44,6 +44,17 @@
         padding: 16px;
       }
 
+      .title {
+        font-size: 30px;
+        color: grey;
+      }
+
+      .image {
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 10px;
+      }
+
       .container::after,
       .row::after {
         content: "";
@@ -52,6 +63,8 @@
       }
 
       .title {
+        margin-top: 60px;
+        font-size: 30px;
         color: grey;
       }
 
@@ -82,56 +95,61 @@
   <body>
     <div class="about-section">
       <h1>About Us Page</h1>
-      <p>Some text about who we are and what we do.</p>
-      <p>Resize the browser window to see that this page is responsive by the way.</p>
+      <a rel="noopener" href="../index.html" class="button"> Home </a>
+      <p>We are graduates of UC Berkeley Coding Bootcamp! This is Project 1: Coffee Locator.</p>
     </div>
-    <h2 style="text-align:center">The Bean Team</h2>
+    <h2 class="title" style="text-align:center">The Team</h2>
     <div class="container">
       <div class="column">
         <div class="card">
-          <img src="../assets/images/scrumMaster.png" alt="Sam" style=" width: 40%">
+          <img class="image" src="../assets/images/scrumMaster.png" alt="Sam" style=" width: 40%">
           <div class="container">
             <h2>Sam Jones</h2>
             <p class="title">Scrum Master</p>
-            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-            <p>sam@example.com</p>
-            <p><button class="button">Contact</button></p>
+            <p>Recent UC Berkeley Coding Bootcamp graduate, 23-year-old software engineer passionate about creating
+              efficient, user-friendly solutions.</p>
+              <p><a target="_blank" rel="noopener" href="https://github.com/ParticularSpace">GitHub Link</a></p>
+            <p><a class="button" href="../pages/contact.html">Contact</a></p>
           </div>
         </div>
       </div>
       <div class="column">
         <div class="card">
-          <img src="../assets/images/apiMaster.png" alt="Al" style="width: 40%">
+          <img class="image" src="../assets/images/apiMaster.png" alt="Al" style="width: 40%">
           <div class="container">
             <h2>Al Hernandez</h2>
             <p class="title">API Master</p>
-            <p>Computer Science scholar and Software Engineer.</p>
-            <p>awessonn@gmail.com</p>
-            <p><button class="button">Contact</button></p>
+            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+            <p><a target="_blank" rel="noopener" href="https://github.com/AlWesson">GitHub Link</a></p>
+            <p><a class="button" href="../pages/contact.html">Contact</a></p>
           </div>
         </div>
       </div>
       <div class="column">
         <div class="card">
-          <img src="../assets/images/quizMaster.png" alt="Jose" style="width:40%">
+          <img class="image" src="../assets/images/quizMaster.png" alt="Jose" style="width:40%">
           <div class="container">
             <h2>Jose Escoto</h2>
             <p class="title">Quiz Master</p>
             <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-            <p>jose@example.com</p>
-            <p><button class="button">Contact</button></p>
+            <p><a target="_blank" rel="noopener" href="https://github.com/escotoj">GitHub Link</a></p>
+            <p><a class="button" href="../pages/contact.html">Contact</a></p>
           </div>
         </div>
       </div>
       <div class="column">
         <div class="card">
-          <img src="../assets/images/cleanUp.png" alt="Jonathan" style="width:40%">
+          <img class="image" src="../assets/images/cleanUp.png" alt="Jonathan" style="width:40%">
           <div class="container">
             <h2>Jonathan Fadera</h2>
             <p class="title">Clean-Up Master</p>
-            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-            <p>jonathan@example.com</p>
-            <p><button class="button">Contact</button></p>
+            <p>Jonathan used to work as a Laboratory Technician since 2012. He received his Associate of Applied Science
+              Degree in Medical Laboratory Technician from Sanford Brown College - Houston, TX in 2012. A year ago, he
+              decided to be stay home dad to take care of their two kids. After moving from Texas to Washington,
+              Jonathan is now 6 weeks into online Coding Bootcamp in UC Berkeley. This is his first project presentation
+              after switching careers.</p>
+            <p><a target="_blank" rel="noopener" href="https://github.com/JonathanFadera">GitHub Link</a></p>
+            <p><a class="button" href="../pages/contact.html">Contact</a></p>
           </div>
         </div>
       </div>
