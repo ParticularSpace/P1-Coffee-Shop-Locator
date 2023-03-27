@@ -1,17 +1,26 @@
 let longi = '';
 let lati = '';
 
+let modal = document.getElementById("divModal");
+let span = document.getElementsByClassName("X_button")[0];
+
 let rec; // recipes
 let loc; // location
-//let loop = loc.length;
 
-//let test = "flat_white";
 
-	// external variable: let x = value of quiz score.
-	let $x = localStorage.getItem("coffeeType"); // = quiz score;
+span.onclick = function() {
+modal.style.display = "none";
+};
+
+let $x = localStorage.getItem("coffeeType"); // = quiz score;
+
+function showTheModal () {
+	modal.style.display = "block";
+};
+
 	// Coffee recipes
 
-	const coffeeRecipes = {
+	/*const coffeeRecipes = {
 		"async": true,
 		"crossDomain": true,
 		"url": "https://the-coffee-api.p.rapidapi.com/drinks/unique/name/" + $x + "?keys=description%2ChasAlcohol%2CcupSize%2Crecipe",
@@ -28,45 +37,47 @@ let loc; // location
 		rec = response;
 	  displayRecipes();
 	});
-
+	*/
 
 
 
 
 	// displayRecipes does exactly that. It's target is index.html under the quiz container. 
-	function displayRecipes () {
-		let counter = rec.recipe.ingredients.length;
-		let counter2 = rec.recipe.instructions.length;
-		let pHolder1 = rec.name;
-		let tempArray = [];
+function displayRecipes () {
+	let counter = rec.recipe.ingredients.length;
+	let counter2 = rec.recipe.instructions.length;
+	let pHolder1 = rec.name;
+	let tempArray = [];
 
 	//=====================
-		localStorage.setItem("x", 1);
-		let x = localStorage.getItem("x");
+	localStorage.setItem("x", 1);
+	let x = localStorage.getItem("x");
 	//====================
 	
-		for(j = 0; j < counter; j++){
-			tempArray.push(rec.recipe.ingredients[j]);
-		}
+	for(j = 0; j < counter; j++){
+		tempArray.push(rec.recipe.ingredients[j]);
+	}
 	
-		let pHolder2 = tempArray.map(function(el){
-			return el.name + " " + el.quantity;
-		});
+	let pHolder2 = tempArray.map(function(el){
+		return el.name + " " + el.quantity;
+	});
 
-		let pHolder3 = [];
+	let pHolder3 = [];
 
-		for(k = 0; k < counter2; k++){
-			pHolder3.push(rec.recipe.instructions[k]);
-		}
+	for(k = 0; k < counter2; k++){
+		pHolder3.push(rec.recipe.instructions[k]);
+	}
 
-		let $newLi = $("<li/>")
-			.addClass("card remover")
-			.attr("onClick","ridLocalStorage()","style","background-color: lightblue; padding: 1%; border-radius: 12px; margin-top: 2%; list-style-type: none;transition: all 0.2s ease-in-out; background: linear-gradient(124deg, cadetblue, lightskyblue, lightsteelblue,lightblue, cornflowerblue); background-size: 1800% 1800%; -webkit-animation: rainbow 8s ease infinite;-z-animation: rainbow 8s ease infinite;-o-animation: rainbow 8s ease infinite;animation: rainbow 12s ease infinite;")
-			//.html(pHolder1 + ": " + pHolder2.join(", ") + "... " + pHolder3.join(", "));//
-			.html("x");
-		$(".recipe-container").append($newLi);
+	let $newLi = $("<li/>")
+		.addClass("card remover")
+		.attr("onClick","ridLocalStorage()","style","background-color: lightblue; padding: 1%; border-radius: 12px; margin-top: 2%; list-style-type: none;transition: all 0.2s ease-in-out; background: linear-gradient(124deg, cadetblue, lightskyblue, lightsteelblue,lightblue, cornflowerblue); background-size: 1800% 1800%; -webkit-animation: rainbow 8s ease infinite;-z-animation: rainbow 8s ease infinite;-o-animation: rainbow 8s ease infinite;animation: rainbow 12s ease infinite;")
+		//.html(pHolder1 + ": " + pHolder2.join(", ") + "... " + pHolder3.join(", "));//
+		.html("x");
+	$(".recipe-container").append($newLi);
 		
-	};
+};
+
+
 // option to remove stored quiz results.
 function ridLocalStorage(){
 	
@@ -92,7 +103,7 @@ function displayLocations () {
 		let temp4 = loc[i].poi.phone;
 		let $newLi = $("<li/>")
 		.addClass("card")
-		.attr("style","background-color: beige; padding: 1%; border-radius: 12px; margin-top: 2%; list-style-type: none;transition: all 0.2s ease-in-out; background: linear-gradient(beige, blanchedalmond, #e5d5b1, blanchedalmond, linen); background-size: 1800% 1800%; -webkit-animation: rainbow 8s ease infinite;-z-animation: rainbow 4s ease infinite;-o-animation: rainbow 4s ease infinite;animation: rainbow 6s ease infinite;")//
+		.attr("style","background-color: beige; padding: 1%; overflow: auto; border-radius: 12px; margin-top: 2%; list-style-type: none;transition: all 0.2s ease-in-out; background: linear-gradient(beige, blanchedalmond, #e5d5b1, blanchedalmond, linen); background-size: 1800% 1800%; -webkit-animation: rainbow 8s ease infinite;-z-animation: rainbow 4s ease infinite;-o-animation: rainbow 4s ease infinite;animation: rainbow 6s ease infinite;")//
 		.html(temp1 + ", " + temp2 + " " + temp3 + ", " + temp4);
 
 	$(".locations").append($newLi);
@@ -133,10 +144,18 @@ $(document).ready(function () {
 
 		fetch(weatherURL)
         	.then(function(response){
-            return response.json();
+				if(response.status >= 400){
+					
+					//=================================================================== This isnt working.. try making function outside.
+					showTheModal();
+
+				}
+				else{
+			return response.json();
+			}
         })
     	.then(function(data){
-        	//console.log(data);
+        	
 			//===========================
 			lati = data.city.coord.lat;
 			longi = data.city.coord.lon;
@@ -146,16 +165,9 @@ $(document).ready(function () {
 			secondCall(lati,longi);
 			
 		});
-	
-		
 		
 	});
 
-
-
-
-
-	
 });
 
 
