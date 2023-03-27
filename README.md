@@ -1,5 +1,9 @@
 # P1-Coffee-Shop-Locator
 
+## URL
+
+https://particularspace.github.io/P1-Coffee-Shop-Locator/
+
 ## Description
 
 Are you tired of trying to figure out your perfect coffee? Well look no further, take our coffee quiz and enter your zip to find your local coffee shops!
@@ -39,11 +43,6 @@ Jonathan Fadera
 Sam Jones
 
 UC Berkeley Coding Bootcamp Extension
-
-
-## URL
-
-https://particularspace.github.io/P1-Coffee-Shop-Locator/
 
 ## License
 
