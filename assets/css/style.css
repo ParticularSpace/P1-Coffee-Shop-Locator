@@ -4,13 +4,14 @@ body {
   height: 100vh;
 }
 
+
 .cover-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 42em;
-  margin: 0 auto;
+  margin-top: 100px;
   background-color: #f2e6d8;
   border-radius: 20px;
   padding: 20px;
