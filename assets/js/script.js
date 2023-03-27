@@ -5,7 +5,7 @@ let rec; // recipes
 let loc; // location
 //let loop = loc.length;
 
-let test = "flat_white";
+//let test = "flat_white";
 
 	// external variable: let x = value of quiz score.
 	let $x = localStorage.getItem("coffeeType"); // = quiz score;
@@ -40,7 +40,10 @@ let test = "flat_white";
 		let pHolder1 = rec.name;
 		let tempArray = [];
 
-	
+	//=====================
+		localStorage.setItem("x", 1);
+		let x = localStorage.getItem("x");
+	//====================
 	
 		for(j = 0; j < counter; j++){
 			tempArray.push(rec.recipe.ingredients[j]);
@@ -57,12 +60,19 @@ let test = "flat_white";
 		}
 
 		let $newLi = $("<li/>")
-			.addClass("card")
-			.attr("style","background-color: lightblue; padding: 1%; border-radius: 12px; margin-top: 2%; list-style-type: none;transition: all 0.2s ease-in-out; background: linear-gradient(124deg, cadetblue, lightskyblue, lightsteelblue,lightblue, cornflowerblue); background-size: 1800% 1800%; -webkit-animation: rainbow 8s ease infinite;-z-animation: rainbow 8s ease infinite;-o-animation: rainbow 8s ease infinite;animation: rainbow 12s ease infinite;")
-			.html(pHolder1 + ": " + pHolder2.join(", ") + "... " + pHolder3.join(", "));
+			.addClass("card remover")
+			.attr("onClick","ridLocalStorage()","style","background-color: lightblue; padding: 1%; border-radius: 12px; margin-top: 2%; list-style-type: none;transition: all 0.2s ease-in-out; background: linear-gradient(124deg, cadetblue, lightskyblue, lightsteelblue,lightblue, cornflowerblue); background-size: 1800% 1800%; -webkit-animation: rainbow 8s ease infinite;-z-animation: rainbow 8s ease infinite;-o-animation: rainbow 8s ease infinite;animation: rainbow 12s ease infinite;")
+			//.html(pHolder1 + ": " + pHolder2.join(", ") + "... " + pHolder3.join(", "));//
+			.html("x");
 		$(".recipe-container").append($newLi);
-
+		
 	};
+// option to remove stored quiz results.
+function ridLocalStorage(){
+	
+	localStorage.clear();
+	$(".recipe-container").empty();
+};
 
 // this function dynamically creates the html elements along with css attributes for the location api to display its results onto the page.
 function displayLocations () {
